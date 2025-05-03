@@ -6,12 +6,13 @@ public class BuySellStock {
     private static final Scanner sc = new Scanner(System.in);
 
     // Solution
-    public int maxProfit(int[] prices) {
+    public int Solution(int[] prices) {
 
         int minBuyPrice = prices[0];
         int profit = 0;
         int maxProfit = 0;
 
+        // Optimized [O(n)]
         for(int i = 0; i < prices.length-1; i++) {
 
             // Track minimum price of stock
@@ -24,6 +25,19 @@ public class BuySellStock {
             if(profit > maxProfit)
                 maxProfit = profit;
         }
+
+        // Brute Force
+        // for(int i = 0; i < prices.length; i++) {
+
+        //     for(int j = i+1; j < prices.length; j++) {
+
+        //         profit = prices[j] - prices[i];
+        //         if(profit > maxProfit) {
+
+        //             maxProfit = profit;
+        //         }
+        //     }
+        // }
 
         return maxProfit;
     }
@@ -51,11 +65,11 @@ public class BuySellStock {
 
         // Convert from ArrayList to Array
         int[] prices = new int[arr.size()];
-        for(int i = 0; i < arr.size(); i++) {
+        for(int i = 0; i < arr.size(); i++)
             prices[i] = arr.get(i);
-        }
 
-        int output = bss.maxProfit(prices);
+        // Output
+        int output = bss.Solution(prices);
         System.out.println(output);
     }
 }
