@@ -7,7 +7,7 @@ public class TwoSum {
     private static final Scanner sc = new Scanner(System.in);
 
     // Solution
-    public int[] Solution(int[] numbers, int target) {
+    public int[] solution(int[] numbers, int target) {
 
         int[] result = new int[2];
 
@@ -61,16 +61,13 @@ public class TwoSum {
         target = sc.nextInt();
 
         while(sc.hasNext()) {
-
             if(sc.hasNextInt()) {
-
                 number = sc.nextInt();
                 arr.add(number);
             }
             else {
-
                 String input = sc.next();
-                if(input.equalsIgnoreCase("q"))
+                if(input.equalsIgnoreCase("q")) // When input is "q", loop will stop
                     break;
             }
         }
@@ -82,13 +79,11 @@ public class TwoSum {
             numbers[i] = arr.get(i);
 
         // Output
-        int[] output = ts.Solution(numbers, target);
-        int j = 0;
+        int[] output = ts.solution(numbers, target);
         System.out.print("[");
         for(int i = 0; i < output.length; i++) {
-            j = i;
             System.out.print(output[i]);
-            if(j != output.length-1)
+            if(i != output.length-1)
                 System.out.print(", ");
         }
         System.out.print("]");

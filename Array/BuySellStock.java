@@ -6,7 +6,7 @@ public class BuySellStock {
     private static final Scanner sc = new Scanner(System.in);
 
     // Solution
-    public int Solution(int[] prices) {
+    public int solution(int[] prices) {
 
         int minBuyPrice = prices[0];
         int profit = 0;
@@ -50,7 +50,6 @@ public class BuySellStock {
         int price = 0;
 
         while(sc.hasNext()) {
-
             if(sc.hasNextInt()) {
                 price = sc.nextInt();
                 arr.add(price);
@@ -69,7 +68,7 @@ public class BuySellStock {
             prices[i] = arr.get(i);
 
         // Output
-        int output = bss.Solution(prices);
+        int output = bss.solution(prices);
         System.out.println(output);
     }
 }
