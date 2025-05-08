@@ -1,7 +1,8 @@
+// https://leetcode.com/problems/maximum-subarray/description/
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class MaxSubArray {
+public class MaxSubArraySum {
 
     private static final Scanner sc = new Scanner(System.in);
 
@@ -39,7 +40,7 @@ public class MaxSubArray {
     // For CPH
     public static void main(String args[]) {
 
-        MaxSubArray msa = new MaxSubArray();
+        MaxSubArraySum msas = new MaxSubArraySum();
         ArrayList<Integer> arr = new ArrayList<>();
         int number = 0;
 
@@ -62,7 +63,7 @@ public class MaxSubArray {
             nums[i] = arr.get(i);
 
         // Output
-        int output = msa.solution(nums);
+        int output = msas.solution(nums);
         System.out.print(output);
     }
 }

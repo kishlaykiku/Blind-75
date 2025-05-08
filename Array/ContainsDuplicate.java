@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/contains-duplicate/description/
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.HashSet;
