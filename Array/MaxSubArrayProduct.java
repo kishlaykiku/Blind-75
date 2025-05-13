@@ -6,9 +6,24 @@ public class MaxSubArrayProduct {
     private static final Scanner sc = new Scanner(System.in);
 
     // Solution
-    public int solution(int[]nums) {
+    public int solution(int[] nums) {
 
-        return 0;
+        int maxProduct = Integer.MIN_VALUE;
+        int product = 1;
+
+        // Brute Force
+        for(int i = 0; i < nums.length; i++) {
+
+            product = 1;
+
+            for(int j = i; j < nums.length; j++) {
+
+                product *= nums[j];
+                maxProduct = Math.max(maxProduct, product);
+            }
+        }
+
+        return maxProduct;
     }
 
     // For CPH
@@ -33,7 +48,7 @@ public class MaxSubArrayProduct {
 
         // Convert from ArrayList to Array
         int[] nums = new int[arr.size()];
-        for(int i = 0; i < nums.length; i++)
+        for(int i = 0; i < arr.size(); i++)
             nums[i] = arr.get(i);
 
         // Output
