@@ -70,6 +70,6 @@ public class BuySellStock {
 
         // Output
         int output = bss.solution(prices);
-        System.out.println(output);
+        System.out.print(output);
     }
 }
