@@ -6,9 +6,38 @@ public class MaxArea {
     private static final Scanner sc = new Scanner(System.in);
 
     // Solution
-    public int solution(int[] nums) {
+    public int solution(int[] height) {
 
-        return 0;
+        int maxArea = 0;
+
+        // Optimized [O(n)]
+        int left = 0;
+        int right = height.length - 1;
+
+        while (left < right) {
+
+            int area = Math.min(height[left], height[right]) * (right - left);
+            maxArea = Math.max(maxArea, area);
+
+            if (height[left] < height[right])
+                left++;
+            else
+                right--;
+        }
+        
+        // Brute Force
+        // for(int i = 0; i < height.length; i++) {
+
+        //     for(int j = i+1; j < height.length; j++) {
+
+        //         int area = Math.min(height[i], height[j]) * (j-i);
+
+        //         if(area > maxArea)
+        //             maxArea = area;
+        //     }
+        // }
+
+        return maxArea;
     }
 
     // For CPH
@@ -23,7 +52,7 @@ public class MaxArea {
                 number = sc.nextInt();
                 arr.add(number);
             }
-            else {
+            else { 
                 String input = sc.next();
                 if(input.equalsIgnoreCase("q")) // When input is "q", loop will stop
                     break;
