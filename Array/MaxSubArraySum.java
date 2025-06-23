@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-subarray/description/
+// https://leetcode.com/problems/maximum-subarray/
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -21,6 +21,7 @@ public class MaxSubArraySum {
             if(currentSum < 0)
                 currentSum = 0;
         }
+
 
         // Brute Force
         // for(int i = 0; i < nums.length; i++) {

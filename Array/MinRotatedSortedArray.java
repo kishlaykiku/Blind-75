@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -24,6 +25,7 @@ public class MinRotatedSortedArray {
         }
 
         return nums[0];
+
 
         // Brute Force
         // for(int i = 0; i < nums.length-1; i++) {

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
+// https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -26,6 +26,7 @@ public class BuySellStock {
             if(profit > maxProfit)
                 maxProfit = profit;
         }
+
 
         // Brute Force
         // for(int i = 0; i < prices.length; i++) {

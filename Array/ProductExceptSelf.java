@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/product-of-array-except-self/description/
+// https://leetcode.com/problems/product-of-array-except-self/
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -26,6 +26,7 @@ public class ProductExceptSelf {
 
         for(int i = 0; i < nums.length; i++)
             productArray[i] = left[i] * right[i];
+
 
         // Brute Force
         // int product = 1;

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/contains-duplicate/description/
+// https://leetcode.com/problems/contains-duplicate/
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -20,6 +20,7 @@ public class ContainsDuplicate {
             else
                 seen.add(nums[i]);
         }
+
 
         // Brute Force
         // for(int i = 0; i < nums.length-1; i++) {

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/two-sum/description/
+// https://leetcode.com/problems/two-sum/
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,6 +32,7 @@ public class TwoSum {
                 record.put(numbers[i], i);
             }
         }
+
 
         // Brute Force
         // for(int i = 0; i < numbers.length-1; i++) {
