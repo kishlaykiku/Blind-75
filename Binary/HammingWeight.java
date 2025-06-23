@@ -9,13 +9,14 @@ public class HammingWeight {
     public int solution(int n) {
 
         int count = 0;
-        
+    
         // Brian Kernighan's Algorithm [O(n)] - Remove the right most set bit until number becomes 0
         while(n != 0) {
 
             n = n & (n-1);
             count++;
         }
+
 
         // Division approach
         // int rem;
